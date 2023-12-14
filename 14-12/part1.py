@@ -6,12 +6,12 @@ inp=list(map(lambda x: "".join(x),transpose(inp)))
 
 
 res = 0
-def _sort(line,top):
+def sort_column(line,top):
     lines = line.split("#")
     lines = list(map(lambda x: "".join(sorted(x,reverse=top)),lines))
     return "#".join(lines)
 
-inp = list(map(lambda x: _sort(x,True),inp))
+inp = list(map(lambda x: sort_column(x,True),inp))
 inp=transpose(inp)
 
 res = 0
